@@ -16,3 +16,18 @@ photo_directory = os.getcwd()
 #initial test with a single image (will make a pipeline for the photo directory later)
 img_test = cv2.imread("20200516_184555.jpg")
 cv2.imshow("image_test1",img_test)
+
+
+# construct the argument parser and parse the arguments
+ap = argparse.ArgumentParser()
+ap.add_argument("-i", "--image", type=str, required=True,
+	help="path to input image")
+args = vars(ap.parse_args())
+
+# load the image, convert it to grayscale, and blur it slightly
+image = cv2.imread(args["image"])
+gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+blurred = cv2.GaussianBlur(gray, (5, 5), 0)
+# show the original and blurred images
+cv2.imshow("Original", image)
+cv2.imshow("Blurred", blurred)
