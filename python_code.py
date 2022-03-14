@@ -17,11 +17,9 @@ photo_directory = os.getcwd()
 img_test = cv2.imread("20200516_184555.jpg")
 cv2.imshow("image_test1",img_test)
 
-
 # construct the argument parser and parse the arguments
 ap = argparse.ArgumentParser()
-ap.add_argument("-i", "--image", type=str, required=True,
-	help="path to input image")
+ap.add_argument("-i", "--image", type=str, required=True,help="path to input image")
 args = vars(ap.parse_args())
 
 # load the image, convert it to grayscale, and blur it slightly
