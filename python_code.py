@@ -9,9 +9,11 @@ import os
 import cv2
 import argparse
 
-os.chdir("C:\Users\mmsch\OneDrive\Desktop\pet_project\cute_photos")
+#get directories
+os.chdir("C:/Users/mmsch/OneDrive/Desktop/pet_project/cute_photos")
 photo_directory = os.getcwd()
 #print(photo_directory)
+
 
 #initial test with a single image (will make a pipeline for the photo directory later)
 img_test = cv2.imread("20200516_184555.jpg")
