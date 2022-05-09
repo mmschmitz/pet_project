@@ -1,3 +1,7 @@
+""" Writing a code to try to convert image (binary) files into edges.
+Unfortunately, it's been a few years since I've written a lot of Python, so... 
+I've got a lot of links here. :)
+ """
 #https://pyimagesearch.com/2021/05/12/opencv-edge-detection-cv2-canny/
 #https://pyimagesearch.com/2018/09/19/pip-install-opencv/
 
@@ -16,9 +20,11 @@ photo_directory = os.getcwd()
 #print(photo_directory)
 
 os.listdir(photo_directory)
+#https://stackoverflow.com/questions/1724693/find-a-file-in-python
 ########----
 
 #initial test with a single image (will make a pipeline for the photo directory later)
+data_file = open('20200516_184555.jpg',"r+")
 img_test = cv2.imread("20200516_184555.jpg")
 cv2.imshow("image_test1",img_test)
 
